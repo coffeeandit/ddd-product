@@ -1,5 +1,7 @@
 package br.com.sicredi.warehouse.business;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;
@@ -8,12 +10,10 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.logging.Logger;
-
 @Service
 public class WarehouseInOutRecovery  {
 
-    private Logger LOG = Logger.getLogger(WarehouseInOutRecovery.class.getSimpleName());
+    private Logger LOG = LoggerFactory.getLogger(WarehouseInOutRecovery.class);
     @Value("${app.topicError}")
     private String topic;
     private KafkaTemplate<String, String> kafkaTemplate;

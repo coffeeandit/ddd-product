@@ -1,11 +1,14 @@
 package br.com.sicredi.warehouse.business;
 
+import br.com.sicredi.SpringApplication;
 import br.com.sicredi.config.DomainBusinessException;
 import br.com.sicredi.config.InfraestructureException;
 import br.com.sicredi.produto.business.ProductBusiness;
 import br.com.sicredi.produto.domain.Product;
 import br.com.sicredi.warehouse.infra.WarehouseOutSaleProduct;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -15,13 +18,12 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.Optional;
-import java.util.logging.Logger;
 
 @Service
 public class WarehouseInOutConsumer {
 
     private KafkaTemplate<String, String> kafkaTemplate;
-    private Logger LOG = Logger.getLogger(WarehouseInOutConsumer.class.getSimpleName());
+    private Logger LOG = LoggerFactory.getLogger(WarehouseInOutConsumer.class);
 
     private WarehouseBusiness warehouseBusiness;
 

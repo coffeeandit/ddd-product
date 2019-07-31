@@ -1,5 +1,6 @@
 package br.com.sicredi.warehouse.business;
 
+import br.com.sicredi.SpringApplication;
 import br.com.sicredi.produto.business.ProductBusiness;
 import br.com.sicredi.produto.domain.Product;
 import br.com.sicredi.produto.domain.ProductBuilder;
@@ -8,22 +9,22 @@ import br.com.sicredi.warehouse.domain.WarehouseMove;
 import br.com.sicredi.warehouse.domain.WarehouseMoveEntity;
 import br.com.sicredi.warehouse.infra.WarehouseObserver;
 import br.com.sicredi.warehouse.infra.WarehouseRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.*;
-import java.util.logging.Logger;
 
 @Service
-@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class WarehouseBusiness {
 
     private Set<WarehouseObserver> warehouseObserverSet;
 
 
-    private Logger LOG = Logger.getLogger(WarehouseBusiness.class.getSimpleName());
+    private Logger LOG = LoggerFactory.getLogger(SpringApplication.class);
     private WarehouseRepository warehouseRepository;
     private ProductBusiness productBusiness;
 

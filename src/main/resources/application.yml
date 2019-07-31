@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: ddd-product
+  zipkin:
+    base-url: http://ec2-34-219-190-76.us-west-2.compute.amazonaws.com:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+    enabled: true
   kafka:
     bootstrap-servers: ec2-34-219-190-76.us-west-2.compute.amazonaws.com:9092
     consumer:

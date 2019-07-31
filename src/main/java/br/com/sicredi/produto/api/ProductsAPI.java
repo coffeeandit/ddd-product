@@ -2,6 +2,7 @@ package br.com.sicredi.produto.api;
 
 import br.com.sicredi.produto.business.ProductBusiness;
 import br.com.sicredi.produto.domain.Product;
+import br.com.sicredi.produto.infra.ProductInactivationTransport;
 import br.com.sicredi.produto.infra.ProductTransport;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -47,7 +48,7 @@ public class ProductsAPI {
     )
     public ResponseEntity inativar(@PathVariable("id") final Integer id
             ,
-                                   @RequestBody(required = false) ProductTransport productTransport
+                                   @RequestBody(required = false) ProductInactivationTransport productInactivationTransport
     ) {
 
         Optional<Product> product = productBusiness.inativarProduto(id);

@@ -4,6 +4,8 @@ import br.com.sicredi.config.DomainBusinessException;
 import br.com.sicredi.config.InfraestructureException;
 import br.com.sicredi.warehouse.business.WarehouseInOutRecovery;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer;
@@ -30,7 +32,6 @@ import org.springframework.transaction.support.AbstractPlatformTransactionManage
 
 import javax.persistence.EntityManagerFactory;
 import java.util.HashMap;
-import java.util.logging.Logger;
 
 @SpringBootApplication
 @EnableAutoConfiguration
@@ -40,7 +41,7 @@ import java.util.logging.Logger;
 @EnableRetry
 public class SpringApplication {
 
-    private Logger LOG = Logger.getLogger(SpringApplication.class.getSimpleName());
+    private Logger LOG = LoggerFactory.getLogger(SpringApplication.class);
 
 
     public static void main(String[] args) {
