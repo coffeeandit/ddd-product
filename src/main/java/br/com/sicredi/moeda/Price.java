@@ -8,19 +8,19 @@ import java.util.Locale;
 
 public class Price {
 
-    private Currency currency = Currency.getInstance(new Locale("pt", "br"));
+    private static final Currency INSTANCE = Currency.getInstance(new Locale("pt", "br"));
     private static final RoundingMode DEFAULT_ROUNDING = RoundingMode.HALF_EVEN;
 
     private BigDecimal amount;
 
     public Price(final BigDecimal amount) {
 
-        this.amount = amount.setScale(currency.getDefaultFractionDigits(), DEFAULT_ROUNDING);
+        this.amount = amount.setScale(INSTANCE.getDefaultFractionDigits(), DEFAULT_ROUNDING);
 
     }
 
     public String toString() {
-        return currency.getSymbol() + " " + amount;
+        return INSTANCE.getSymbol() + " " + amount;
     }
 
     public BigDecimal getAmount() {

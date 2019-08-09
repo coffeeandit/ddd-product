@@ -11,12 +11,19 @@ spring:
     enabled: true
   kafka:
     bootstrap-servers: ec2-34-219-190-76.us-west-2.compute.amazonaws.com:9092
+    properties:
+      security:
+        protocol: PLAINTEXT
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username="alice" password="alice-secret";
     consumer:
       group-id: product
       key-serializer: org.apache.kafka.common.serialization.StringDeserializer
       value-serializer: org.apache.kafka.common.serialization.StringDeserializer
-      auto-offset-reset: earliest
-      enable-auto-commit:  false
+      auto-offset-reset: latest
+      enable-auto-commit:  true
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -41,3 +48,7 @@ spring:
 app:
   topic: sales
   topicError: sales_error
+
+logging:
+  level:
+    root: INFO

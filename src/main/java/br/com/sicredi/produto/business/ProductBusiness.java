@@ -30,7 +30,7 @@ public class ProductBusiness {
     }
 
     public void atualizarSituacaoProduto(final Product product) {
-        Optional<ProductEntity> productOptional = productRepository.findById(product.getId());
+        var productOptional = productRepository.findById(product.getId());
         if (productOptional.isPresent()) {
             ProductEntity productEntity = productOptional.get();
             productEntity.setSituacaoProduto(product.getSituacaoProduto());
@@ -41,7 +41,7 @@ public class ProductBusiness {
     }
 
     public Optional<Product> inativarProduto(final Integer id) {
-        Optional<ProductEntity> product = productRepository.findById(id);
+        var product = productRepository.findById(id);
         if (product.isPresent()) {
             var productBuilder = new ProductBuilder();
             ProductEntity productEntity = product.get();
@@ -54,7 +54,7 @@ public class ProductBusiness {
 
     public Optional<Product> findById(Integer id) {
 
-        Optional<ProductEntity> productRepositoryById = productRepository.findById(id);
+        var productRepositoryById = productRepository.findById(id);
 
         if (productRepositoryById.isPresent()) {
             var productBuilder = new ProductBuilder();

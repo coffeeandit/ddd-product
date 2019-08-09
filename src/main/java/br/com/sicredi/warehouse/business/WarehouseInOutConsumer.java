@@ -1,6 +1,5 @@
 package br.com.sicredi.warehouse.business;
 
-import br.com.sicredi.SpringApplication;
 import br.com.sicredi.config.DomainBusinessException;
 import br.com.sicredi.config.InfraestructureException;
 import br.com.sicredi.produto.business.ProductBusiness;

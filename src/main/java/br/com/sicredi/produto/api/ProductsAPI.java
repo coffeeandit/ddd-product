@@ -4,6 +4,7 @@ import br.com.sicredi.produto.business.ProductBusiness;
 import br.com.sicredi.produto.domain.Product;
 import br.com.sicredi.produto.infra.ProductInactivationTransport;
 import br.com.sicredi.produto.infra.ProductTransport;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ public class ProductsAPI {
         this.productBusiness = productBusiness;
     }
 
+
     @RequestMapping(value = "/products/", produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST
 
@@ -33,10 +35,13 @@ public class ProductsAPI {
             consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET
 
     )
+    @ApiOperation(notes = "asdadad", value = "")
     public ResponseEntity findById(@PathVariable("id") final Integer id
-            , @RequestHeader(value = "Content-type", defaultValue = MediaType.APPLICATION_JSON_VALUE) final String contentType) {
+            , @RequestHeader(value = "Content-type", defaultValue = MediaType.APPLICATION_JSON_VALUE) final String contentType
 
-        Optional<Product> product = productBusiness.findById(id);
+    ) {
+
+        var product = productBusiness.findById(id);
         if (product.isEmpty())
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(product);
@@ -51,7 +56,7 @@ public class ProductsAPI {
                                    @RequestBody(required = false) ProductInactivationTransport productInactivationTransport
     ) {
 
-        Optional<Product> product = productBusiness.inativarProduto(id);
+        var product = productBusiness.inativarProduto(id);
         if (product.isEmpty())
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(product);

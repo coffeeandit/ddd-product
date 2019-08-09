@@ -3,6 +3,7 @@ package br.com.sicredi.produto.domain;
 import br.com.sicredi.moeda.Price;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -13,7 +14,9 @@ public class Product {
         return id;
     }
 
+    @NotNull
     private Integer id;
+    @NotNull
     private String name;
     private Price price;
 

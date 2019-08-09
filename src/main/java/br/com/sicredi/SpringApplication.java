@@ -28,6 +28,7 @@ import org.springframework.retry.policy.ExceptionClassifierRetryPolicy;
 import org.springframework.retry.policy.NeverRetryPolicy;
 import org.springframework.retry.policy.SimpleRetryPolicy;
 import org.springframework.retry.support.RetryTemplate;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.transaction.support.AbstractPlatformTransactionManager;
 
 import javax.persistence.EntityManagerFactory;
@@ -39,6 +40,7 @@ import java.util.HashMap;
 @EnableJpaRepositories
 @EnableKafka
 @EnableRetry
+@EnableAsync
 public class SpringApplication {
 
     private Logger LOG = LoggerFactory.getLogger(SpringApplication.class);
@@ -48,6 +50,8 @@ public class SpringApplication {
         final long currentTimeMillis = System.currentTimeMillis();
         System.setProperty("spring.kafka.producer.client-id", "product-client" + currentTimeMillis);
         System.setProperty("spring.kafka.producer.producer-id", "product-producer" + currentTimeMillis);
+
+
 
         org.springframework.boot.SpringApplication.run(SpringApplication.class, args);
     }
