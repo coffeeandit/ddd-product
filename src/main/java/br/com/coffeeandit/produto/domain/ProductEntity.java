@@ -1,4 +1,4 @@
-package br.com.sicredi.produto.domain;
+package br.com.coffeeandit.produto.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package br.com.sicredi.moeda;
+package br.com.coffeeandit.moeda;
 
 
 import java.math.BigDecimal;

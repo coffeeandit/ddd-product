@@ -1,7 +1,7 @@
-package br.com.sicredi.warehouse.infra;
+package br.com.coffeeandit.warehouse.infra;
 
-import br.com.sicredi.produto.domain.ProductEntity;
-import br.com.sicredi.warehouse.domain.WarehouseMoveEntity;
+import br.com.coffeeandit.produto.domain.ProductEntity;
+import br.com.coffeeandit.warehouse.domain.WarehouseMoveEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
-package br.com.sicredi.warehouse.domain;
+package br.com.coffeeandit.warehouse.domain;
 
-import br.com.sicredi.produto.domain.Product;
+import br.com.coffeeandit.produto.domain.Product;
 
 import java.time.LocalDateTime;
 

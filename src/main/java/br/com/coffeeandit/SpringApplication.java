@@ -1,8 +1,8 @@
-package br.com.sicredi;
+package br.com.coffeeandit;
 
-import br.com.sicredi.config.DomainBusinessException;
-import br.com.sicredi.config.InfraestructureException;
-import br.com.sicredi.warehouse.business.WarehouseInOutRecovery;
+import br.com.coffeeandit.config.DomainBusinessException;
+import br.com.coffeeandit.config.InfraestructureException;
+import br.com.coffeeandit.warehouse.business.WarehouseInOutRecovery;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +36,7 @@ import java.util.HashMap;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan("br.com.sicredi")
+@ComponentScan("br.com.coffeeandit")
 @EnableJpaRepositories
 @EnableKafka
 @EnableRetry

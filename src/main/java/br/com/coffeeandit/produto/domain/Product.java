@@ -1,6 +1,6 @@
-package br.com.sicredi.produto.domain;
+package br.com.coffeeandit.produto.domain;
 
-import br.com.sicredi.moeda.Price;
+import br.com.coffeeandit.moeda.Price;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.validation.constraints.NotNull;

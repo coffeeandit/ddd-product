@@ -1,4 +1,4 @@
-package br.com.sicredi.config;
+package br.com.coffeeandit.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("br.com.sicredi")).build()
+                .apis(RequestHandlerSelectors.basePackage("br.com.coffeeandit")).build()
                 .consumes(getContentType()).produces(getContentType()).securitySchemes(getSecuritySchemes())
                 .apiInfo(apiInfo());
     }
@@ -40,9 +40,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "API de Exemplo de Qualidade do Sicredi",
+                "API de Exemplo de Coffeeandit",
                 "", "API 1.1.5", "Terms of service",
-                new Contact("Qualidade Sicredi", "qualidade.sicredi.com.br", "qualidade@confederacaosicredi.onmicrosoft.com"),
+                new Contact("Coffeeandit", "coffeeandit.com.br", "coffeeandit@coffeeandit.com.br"),
                 "License of API", "API license URL", Collections.emptyList());
     }
 }

@@ -1,16 +1,15 @@
-package br.com.sicredi.produto.api;
+package br.com.coffeeandit.produto.api;
 
-import br.com.sicredi.produto.business.ProductBusiness;
-import br.com.sicredi.produto.domain.Product;
-import br.com.sicredi.produto.infra.ProductInactivationTransport;
-import br.com.sicredi.produto.infra.ProductTransport;
+import br.com.coffeeandit.produto.business.ProductBusiness;
+import br.com.coffeeandit.produto.domain.Product;
+import br.com.coffeeandit.produto.infra.ProductInactivationTransport;
+import br.com.coffeeandit.produto.infra.ProductTransport;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.Optional;
 
 @RestController
 public class ProductsAPI {

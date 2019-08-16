@@ -1,10 +1,10 @@
-package br.com.sicredi.warehouse.api;
+package br.com.coffeeandit.warehouse.api;
 
-import br.com.sicredi.produto.business.ProductBusiness;
-import br.com.sicredi.produto.domain.Product;
-import br.com.sicredi.warehouse.business.WarehouseBusiness;
-import br.com.sicredi.warehouse.domain.WarehouseMove;
-import br.com.sicredi.warehouse.infra.WarehouseInOutProduct;
+import br.com.coffeeandit.produto.business.ProductBusiness;
+import br.com.coffeeandit.produto.domain.Product;
+import br.com.coffeeandit.warehouse.business.WarehouseBusiness;
+import br.com.coffeeandit.warehouse.domain.WarehouseMove;
+import br.com.coffeeandit.warehouse.infra.WarehouseInOutProduct;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package br.com.sicredi.produto.infra;
+package br.com.coffeeandit.produto.infra;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;

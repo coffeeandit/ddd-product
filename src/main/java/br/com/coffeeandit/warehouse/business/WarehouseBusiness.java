@@ -1,14 +1,14 @@
-package br.com.sicredi.warehouse.business;
+package br.com.coffeeandit.warehouse.business;
 
-import br.com.sicredi.SpringApplication;
-import br.com.sicredi.produto.business.ProductBusiness;
-import br.com.sicredi.produto.domain.Product;
-import br.com.sicredi.produto.domain.ProductBuilder;
-import br.com.sicredi.produto.domain.ProductEntity;
-import br.com.sicredi.warehouse.domain.WarehouseMove;
-import br.com.sicredi.warehouse.domain.WarehouseMoveEntity;
-import br.com.sicredi.warehouse.infra.WarehouseObserver;
-import br.com.sicredi.warehouse.infra.WarehouseRepository;
+import br.com.coffeeandit.SpringApplication;
+import br.com.coffeeandit.produto.business.ProductBusiness;
+import br.com.coffeeandit.produto.domain.Product;
+import br.com.coffeeandit.produto.domain.ProductBuilder;
+import br.com.coffeeandit.produto.domain.ProductEntity;
+import br.com.coffeeandit.warehouse.domain.WarehouseMove;
+import br.com.coffeeandit.warehouse.domain.WarehouseMoveEntity;
+import br.com.coffeeandit.warehouse.infra.WarehouseObserver;
+import br.com.coffeeandit.warehouse.infra.WarehouseRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

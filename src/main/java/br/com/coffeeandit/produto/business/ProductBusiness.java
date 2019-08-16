@@ -1,9 +1,9 @@
-package br.com.sicredi.produto.business;
+package br.com.coffeeandit.produto.business;
 
-import br.com.sicredi.produto.domain.Product;
-import br.com.sicredi.produto.domain.ProductBuilder;
-import br.com.sicredi.produto.domain.ProductEntity;
-import br.com.sicredi.produto.infra.ProductRepository;
+import br.com.coffeeandit.produto.domain.Product;
+import br.com.coffeeandit.produto.domain.ProductBuilder;
+import br.com.coffeeandit.produto.domain.ProductEntity;
+import br.com.coffeeandit.produto.infra.ProductRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

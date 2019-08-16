@@ -1,4 +1,4 @@
-package br.com.sicredi.config;
+package br.com.coffeeandit.config;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

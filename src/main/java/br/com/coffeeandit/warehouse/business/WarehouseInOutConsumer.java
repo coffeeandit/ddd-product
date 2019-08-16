@@ -1,10 +1,10 @@
-package br.com.sicredi.warehouse.business;
+package br.com.coffeeandit.warehouse.business;
 
-import br.com.sicredi.config.DomainBusinessException;
-import br.com.sicredi.config.InfraestructureException;
-import br.com.sicredi.produto.business.ProductBusiness;
-import br.com.sicredi.produto.domain.Product;
-import br.com.sicredi.warehouse.infra.WarehouseOutSaleProduct;
+import br.com.coffeeandit.config.DomainBusinessException;
+import br.com.coffeeandit.config.InfraestructureException;
+import br.com.coffeeandit.produto.business.ProductBusiness;
+import br.com.coffeeandit.produto.domain.Product;
+import br.com.coffeeandit.warehouse.infra.WarehouseOutSaleProduct;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

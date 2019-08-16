@@ -1,4 +1,4 @@
-package br.com.sicredi.warehouse.infra;
+package br.com.coffeeandit.warehouse.infra;
 
 public class WarehouseOutSaleProduct extends WarehouseInOutProduct {
 

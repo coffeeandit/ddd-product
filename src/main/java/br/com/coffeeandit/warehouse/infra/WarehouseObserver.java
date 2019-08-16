@@ -1,6 +1,6 @@
-package br.com.sicredi.warehouse.infra;
+package br.com.coffeeandit.warehouse.infra;
 
-import br.com.sicredi.produto.domain.Product;
+import br.com.coffeeandit.produto.domain.Product;
 
 @FunctionalInterface
 public interface WarehouseObserver {

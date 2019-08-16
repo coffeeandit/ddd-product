@@ -1,4 +1,4 @@
-package br.com.sicredi.warehouse.business;
+package br.com.coffeeandit.warehouse.business;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
